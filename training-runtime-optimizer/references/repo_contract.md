@@ -51,20 +51,6 @@ Current ImageNet dataset settings that must not drift silently:
 - `mixup_mode=elem`
 - `mixup_off_epoch=175`
 
-## GradNorm Contract
-
-Source files:
-
-- `robust_training/configs/attacks/adv.yaml`
-- `robust_training/adversarial_training.py`
-- `ares/utils/train_loop.py`
-- `ares/utils/gradnorm.py`
-
-Protected behaviors:
-
-- GradNorm remains a regularization path, not adversarial training
-- `gradnorm_penalty_norm=l2` must be explicitly covered by tests and benchmarks
-- candidate runtime work may reduce overhead but must not change the regularization meaning
 
 ## Pixel-Space Protocol Coverage For This Skill
 
@@ -84,16 +70,3 @@ For TRADES, the main repo contract stays unchanged:
 
 The skill may benchmark additive TRADES random-start variants, but only through additive wrappers in the benchmark runner. That does not change the main repo contract.
 
-## V1 Feature-Attack Contract
-
-Source files:
-
-- `robust_training/configs/model/convnext_small_v1.yaml`
-- `robust_training/adversarial_training.py`
-- `ares/utils/adv.py`
-
-Protected behaviors:
-
-- `convnext_small_v1` uses feature-space attack math when `attack_domain=v1_feature`
-- V1 noise must stay rejected for adversarial training
-- this skill protects `attack_norm=l2` for both Madry and TRADES V1 feature adversarial training
