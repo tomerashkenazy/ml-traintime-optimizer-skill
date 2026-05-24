@@ -76,9 +76,6 @@ Stage 4: full-epoch validation.
 
 - pixel-space ConvNeXt Small LINF L2 L1 Madry
 - pixel-space ConvNeXt Small LINF L2 L1 TRADES, with and without radom start for the adversarial inner loop
-- ConvNeXt Small GradNorm with `gradnorm_penalty_norm=l2`
-- ConvNeXt Small V1 with `attack_domain=v1_feature`, `attack_norm=l2`, `attack_criterion=madry`
-- ConvNeXt Small V1 with `attack_domain=v1_feature`, `attack_norm=l2`, `attack_criterion=trades`
 
 # Benchmark Rules
 
