@@ -19,8 +19,6 @@ Default local check profile:
 
 - `warmup_iters=1`
 - `measured_iters=5`
-- worker checks at `num_workers=6` and `num_workers=8`
-- batch-size fallback ladder `128 -> 112 -> 96`
 - only fall back to the next smaller batch size on OOM
 
 ## Candidate Rules
