@@ -9,9 +9,9 @@ The skill is designed for repeated timing work:
 - track tested ideas to avoid repetition
 - inspect and generate cluster/Slurm timing jobs for promising ideas
 - keep recommendations separate from exploration
-- require stronger validation for risky candidates such as `torch.compile`
+- require stronger validation for risky candidates
 
-The current scripts were developed around the `ares` adversarial training repo, but the structure is useful for other training projects that need careful timing experiments across local and cluster hardware. To adapt it, update the repo contract, protocol definitions, dataset paths, environment names, and Slurm targets.
+The current scripts were developed using the `ares` adversarial training repo, but the structure is useful for other training projects that need careful timing experiments across local and cluster hardware. To adapt it, update the repo contract, protocol definitions, dataset paths, environment names, and Slurm targets.
 
 ## Included Files
 
@@ -23,7 +23,6 @@ training-runtime-optimizer/
 └── scripts/
 ```
 
-The repository intentionally excludes generated files such as run outputs, timing logs, Slurm output files, pycache, and tested-idea state databases.
 
 ## Install
 
@@ -40,4 +39,4 @@ Then update the reference files and script constants for the target training rep
 
 ## Notes
 
-This skill is not a generic profiler. It is a workflow for controlled runtime research where preserving the training protocol matters as much as speed.
+This skill is a workflow for controlled runtime research where preserving the training protocol matters most.
