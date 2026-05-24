@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+state/
+outputs/
+outs/
+wandb/
+*.out
+*.log
+*.csv
+*.tsv
+*.jsonl
+.DS_Store

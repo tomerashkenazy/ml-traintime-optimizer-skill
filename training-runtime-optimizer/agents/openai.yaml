@@ -1,0 +1,3 @@
+display_name: ML Training Timing Optimizer
+short_description: Explore repeated model-training runtime optimizations across local and cluster hardware without changing experiment semantics.
+default_prompt: Optimize model training runtime safely: check tested-idea history, preserve protocol and data semantics, baseline freshly, run contract tests, benchmark one additive idea locally, then generate cluster timing jobs only for local winners.
